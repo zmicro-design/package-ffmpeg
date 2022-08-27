@@ -1,0 +1,17 @@
+#!/bin/bash
+
+help() {
+  echo "Usage:"
+  echo "  zmicro ffmpeg <args ...>"
+  echo ""
+}
+
+core() {
+  ffmpeg "$@"
+}
+
+run() {
+  core "$@"
+}
+
+run "$@"
