@@ -9,7 +9,10 @@ help() {
 }
 
 install() {
-  pm install -y ffmpeg
+  which ffmpeg >>/dev/null 2>&1
+  if [ "$?" != "0" ]; then
+    pm install -y ffmpeg
+  fi
 }
 
 core() {
